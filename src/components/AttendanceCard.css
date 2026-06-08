@@ -1,0 +1,113 @@
+.attendance-card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e8e0d4;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.att-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+.att-title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.att-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.att-sem-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid #d4691a;
+  border-radius: 12px;
+  padding: 2px 12px;
+  font-size: 12px;
+  color: #d4691a;
+  font-weight: 600;
+}
+
+.att-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.att-avg-label {
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+
+.ext-link-icon {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.ext-link-icon:hover {
+  background: rgba(212, 105, 26, 0.1);
+}
+
+.att-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.att-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid #f5f0e8;
+  gap: 12px;
+}
+
+.att-row:last-child {
+  border-bottom: none;
+}
+
+.att-subject {
+  font-size: 13px;
+  color: #333;
+  flex: 1;
+}
+
+.att-pill {
+  background: #2d6a2d;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 12px;
+  min-width: 68px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.att-pill.high {
+  background: #2d6a2d;
+}
+
+@media (max-width: 600px) {
+  .att-header {
+    flex-direction: column;
+  }
+  .att-subject {
+    font-size: 12px;
+  }
+}

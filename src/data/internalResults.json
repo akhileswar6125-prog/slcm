@@ -1,0 +1,47 @@
+{
+  "semester1": [
+    { "courseCode": "MIE 1082", "courseName": "Workshop Practice", "grade": "A" },
+    { "courseCode": "PHY 1072", "courseName": "Applied Physics for Engineers", "grade": "E" },
+    { "courseCode": "CSE 1171", "courseName": "Programming for Problem Solving", "grade": "E" },
+    { "courseCode": "CSE 1181", "courseName": "Programming for Problem Solving Lab", "grade": "D" },
+    { "courseCode": "ECE 1072", "courseName": "Fundamentals of Electronics", "grade": "E" },
+    { "courseCode": "HUM 1071", "courseName": "Communication Skills in English", "grade": "B" },
+    { "courseCode": "HUM 1072", "courseName": "Human Rights and Constitution", "grade": "S" },
+    { "courseCode": "IPE 1071", "courseName": "Universal Human Values and Professional Ethics", "grade": "S" },
+    { "courseCode": "MAT 1172", "courseName": "Computational Mathematics I", "grade": "C" },
+    { "courseCode": "MIE 1072", "courseName": "Fundamentals of Mechanical Engineering", "grade": "E" }
+  ],
+
+  "semester2": [
+    { "courseCode": "CIE 1072", "courseName": "Environmental Studies", "grade": "B" },
+    { "courseCode": "CHM 1072", "courseName": "Applied Chemistry for Engineers", "grade": "D" },
+    { "courseCode": "CIE 1073", "courseName": "Engineering Mechanics and Smart Buildings", "grade": "C" },
+    { "courseCode": "ELE 1072", "courseName": "Fundamentals of Electrical Engineering", "grade": "C" },
+    { "courseCode": "MIE 1083", "courseName": "Computer Aided Engineering Graphics", "grade": "A" },
+    { "courseCode": "DSE 1271", "courseName": "Data Visualisation", "grade": "C" },
+    { "courseCode": "MAT 1272", "courseName": "Computational Mathematics II", "grade": "C" },
+    { "courseCode": "ICT 1271", "courseName": "Introduction to Object Oriented Programming", "grade": "E" },
+    { "courseCode": "ICT 1281", "courseName": "Introduction to Object Oriented Programming Lab", "grade": "D" }
+  ],
+
+  "semester3": [
+    { "courseCode": "MAT 2101", "courseName": "Discrete Mathematical Structures", "internalMarks": 32, "grade": "D" },
+    { "courseCode": "CSS 2101", "courseName": "Data Structures", "internalMarks": 29, "grade": "D" },
+    { "courseCode": "CSS 2102", "courseName": "Data Communication and Computer Networks", "internalMarks": 30, "grade": "E" },
+    { "courseCode": "CSS 2103", "courseName": "Data Analytics", "internalMarks": 32, "grade": "E" },
+    { "courseCode": "CSS 2104", "courseName": "Digital Systems and Computer Organization", "internalMarks": 31, "grade": "E" },
+    { "courseCode": "CSS 2111", "courseName": "Data Structures Lab", "internalMarks": 35, "grade": "E" },
+    { "courseCode": "CSS 2112", "courseName": "Digital Systems Lab", "internalMarks": 46, "grade": "C" }
+  ],
+
+  "semester4": [
+    { "courseCode": "MAT 2201", "courseName": "Probability and Optimization", "internalMarks": 35, "grade": "E" },
+    { "courseCode": "CSS 2204", "courseName": "Operating Systems", "internalMarks": 33, "grade": "E" },
+    { "courseCode": "CSS 2201", "courseName": "Database Systems", "internalMarks": 35, "grade": "C" },
+    { "courseCode": "CSS 2202", "courseName": "Design and Analysis of Algorithms", "internalMarks": 30, "grade": "D" },
+    { "courseCode": "CSS 2203", "courseName": "Introduction to Artificial Intelligence", "internalMarks": 29, "grade": "E" },
+    { "courseCode": "CSS 2213", "courseName": "Object Oriented Software Development Lab", "internalMarks": 40, "grade": "D" },
+    { "courseCode": "CSS 2211", "courseName": "Operating Systems Lab", "internalMarks": 43, "grade": "D" },
+    { "courseCode": "CSS 2212", "courseName": "Database Systems Lab", "internalMarks": 50, "grade": "C" }
+  ]
+}

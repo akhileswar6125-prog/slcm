@@ -1,0 +1,136 @@
+.notice-board {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e8e0d4;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.icon-box {
+  background: #d4691a;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notice-layout {
+  display: flex;
+  gap: 0;
+  border: 1px solid #e8e0d4;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.notice-tabs-left {
+  min-width: 185px;
+  border-right: 1px solid #e8e0d4;
+  background: #fdf8f4;
+}
+
+.notice-tab {
+  padding: 10px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #222;
+  transition: color 0.15s, background 0.15s;
+  border-right: 3px solid transparent;
+  border-bottom: 1px solid #f0e8e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.notice-tab:last-child {
+  border-bottom: none;
+}
+
+.notice-tab:hover {
+  color: #d4691a;
+  background: #fdf5ef;
+}
+
+.notice-tab.active {
+  color: #d4691a;
+  border-right: 3px solid #d4691a;
+  font-weight: 600;
+  background: #fff;
+}
+
+.tab-bell {
+  font-size: 11px;
+}
+
+.notice-content {
+  flex: 1;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #fff8f4;
+}
+
+.notice-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f5f0e8;
+}
+
+.notice-item:last-child {
+  border-bottom: none;
+}
+
+.notice-item:hover {
+  background: #fdf5ef;
+}
+
+.notice-arrow {
+  color: #d4691a;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.notice-title {
+  font-size: 13px;
+  color: #222;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.notice-badge {
+  background: #d4691a;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .notice-tabs-left {
+    min-width: 120px;
+  }
+  .notice-tab {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+}

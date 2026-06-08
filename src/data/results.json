@@ -1,0 +1,8 @@
+{
+  "semester1": { "gpa": 5.95, "credits": 22 },
+  "semester2": { "gpa": 6.73, "credits": 22 },
+  "semester3": { "gpa": 6.76, "credits": 21 },
+  "semester4": { "gpa": 7.39, "credits": 22 },
+  "cgpa": 6.68,
+  "totalCredits": 87
+}

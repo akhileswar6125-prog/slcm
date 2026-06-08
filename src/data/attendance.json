@@ -1,0 +1,34 @@
+[
+  {
+    "subject": "Probability and Optimization",
+    "attendance": 83.33
+  },
+  {
+    "subject": "Database Systems",
+    "attendance": 96
+  },
+  {
+    "subject": "Design and Analysis of Algorithms",
+    "attendance": 84.62
+  },
+  {
+    "subject": "Introduction to Artificial Intelligence",
+    "attendance": 82.93
+  },
+  {
+    "subject": "Operating Systems",
+    "attendance": 84.62
+  },
+  {
+    "subject": "Operating Systems Lab",
+    "attendance": 100
+  },
+  {
+    "subject": "Database Systems Lab",
+    "attendance": 100
+  },
+  {
+    "subject": "OOSD Lab",
+    "attendance": 92.86
+  }
+]

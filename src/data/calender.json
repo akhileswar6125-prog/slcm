@@ -1,0 +1,18 @@
+[
+  {
+    "day": 1,
+    "event": "End Semester Exam Results"
+  },
+  {
+    "day": 2,
+    "event": "Registration for Makeup Exams"
+  },
+  {
+    "day": 8,
+    "event": "Makeup Exams Start"
+  },
+  {
+    "day": 23,
+    "event": "Makeup Exams End"
+  }
+]

@@ -1,0 +1,107 @@
+.dashboard {
+  flex: 1;
+}
+
+/* SEMESTER TRACKER */
+.sem-tracker-wrap {
+  padding: 24px 32px 0;
+  overflow-x: auto;
+}
+
+.sem-tracker {
+  display: flex;
+  align-items: stretch;
+  min-width: fit-content;
+}
+
+.sem-item {
+  height: 44px;
+  padding: 0 24px 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%, 16px 50%);
+  min-width: 100px;
+  position: relative;
+  transition: opacity 0.15s;
+}
+
+.sem-item.sem-first {
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
+  padding-left: 20px;
+}
+
+.sem-item.sem-last {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 16px 50%);
+  padding-right: 20px;
+}
+
+.sem-item.sem-completed {
+  background: #d4691a;
+  color: #fff;
+}
+
+.sem-item.sem-current {
+  background: #2d6a2d;
+  color: #fff;
+  outline: 2px solid #1a4a1a;
+  outline-offset: -2px;
+}
+
+.sem-item.sem-upcoming {
+  background: #e8e0d4;
+  color: #888;
+  border: 1px solid #d0c8bc;
+}
+
+/* WELCOME */
+.welcome-text {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  color: #222;
+  padding: 24px 32px 20px;
+  letter-spacing: 0.2px;
+}
+
+/* CONTENT */
+.dashboard-content {
+  padding: 0 32px 32px;
+}
+
+/* THREE COLUMN */
+.three-col-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 300px;
+  gap: 20px;
+  margin-bottom: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .three-col-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .three-col-grid > *:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .sem-tracker-wrap {
+    padding: 16px 16px 0;
+  }
+  .welcome-text {
+    font-size: 22px;
+    padding: 16px 16px 14px;
+  }
+  .dashboard-content {
+    padding: 0 16px 24px;
+  }
+  .three-col-grid {
+    grid-template-columns: 1fr;
+  }
+}
