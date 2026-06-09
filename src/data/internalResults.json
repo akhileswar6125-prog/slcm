@@ -25,13 +25,13 @@
   ],
 
   "semester3": [
-    { "courseCode": "MAT 2101", "courseName": "Discrete Mathematical Structures", "internalMarks": 32, "grade": "D" },
+    { "courseCode": "MAT 2101", "courseName": "Discrete Mathematical Structures", "internalMarks": 38, "grade": "C" },
     { "courseCode": "CSS 2101", "courseName": "Data Structures", "internalMarks": 29, "grade": "D" },
-    { "courseCode": "CSS 2102", "courseName": "Data Communication and Computer Networks", "internalMarks": 30, "grade": "E" },
-    { "courseCode": "CSS 2103", "courseName": "Data Analytics", "internalMarks": 32, "grade": "E" },
-    { "courseCode": "CSS 2104", "courseName": "Digital Systems and Computer Organization", "internalMarks": 31, "grade": "E" },
+    { "courseCode": "CSS 2102", "courseName": "Data Communication and Computer Networks", "internalMarks": 35, "grade": "C" },
+    { "courseCode": "CSS 2103", "courseName": "Data Analytics", "internalMarks": 38, "grade": "C" },
+    { "courseCode": "CSS 2104", "courseName": "Digital Systems and Computer Organization", "internalMarks": 38, "grade": "C" },
     { "courseCode": "CSS 2111", "courseName": "Data Structures Lab", "internalMarks": 35, "grade": "E" },
-    { "courseCode": "CSS 2112", "courseName": "Digital Systems Lab", "internalMarks": 46, "grade": "C" }
+    { "courseCode": "CSS 2112", "courseName": "Digital Systems Lab", "internalMarks": 46, "grade": "B" }
   ],
 
   "semester4": [
