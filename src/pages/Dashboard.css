@@ -105,3 +105,17 @@
     grid-template-columns: 1fr;
   }
 }
+
+.nav-lms-link {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: #d4691a;
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-weight: 500;
+  transition: text-decoration 0.15s;
+}
+.nav-lms-link:hover { text-decoration: underline; }
+.att-link-wrap { display: block; text-decoration: none; }
+.att-link-wrap:hover .attendance-card { border-color: #d4691a; }

@@ -3,6 +3,7 @@ import './Academics.css'
 import studentData from '../data/student.json'
 import internalResultsData from '../data/internalResults.json'
 import resultsData from '../data/results.json'
+import { COURSES_BY_SEM } from '../data/mockData.js'
 
 const TABS = [
   { key: 'ongoing', label: 'Ongoing Semester' },
@@ -16,17 +17,6 @@ const SEMESTER_OPTIONS = [
   { value: 'sem3', label: 'Semester - III' },
   { value: 'sem2', label: 'Semester - II' },
   { value: 'sem1', label: 'Semester - I' },
-]
-
-const COURSES_SEM4 = [
-  { code: 'MAT 2201 : PROBABILITY AND OPTIMIZATION', type: 'Theory', cls: 'Core', credits: 3, sessions: 24, rereg: 'false', year: 'MIT Manipal : 2025 - 2026' },
-  { code: 'CSS 2204 : OPERATING SYSTEMS', type: 'Theory', cls: 'Core', credits: 3, sessions: 24, rereg: 'false', year: 'MIT Manipal : 2025 - 2026' },
-  { code: 'CSS 2201 : DATABASE SYSTEMS', type: 'Theory', cls: 'Core', credits: 4, sessions: 32, rereg: 'false', year: 'MIT Manipal : 2025 - 2026' },
-  { code: 'CSS 2202 : DESIGN & ANALYSIS OF ALGORITHMS', type: 'Theory', cls: 'Core', credits: 4, sessions: 32, rereg: 'false', year: 'MIT Manipal : 2025 - 2026' },
-  { code: 'CSS 2203 : INTRODUCTION TO ARTIFICIAL INTELLIGENCE', type: 'Theory', cls: 'Core', credits: 3, sessions: 24, rereg: 'false', year: 'MIT Manipal : 2025 - 2026' },
-  { code: 'CSS 2213 : OBJECT - ORIENTED SOFTWARE DEVELOPMENT LAB', type: 'Lab', cls: 'Core', credits: 2, sessions: 16, rereg: 'false', year: 'MIT Manipal : 2025 - 2026' },
-  { code: 'CSS 2211 : OPERATING SYSTEMS LAB', type: 'Lab', cls: 'Core', credits: 1, sessions: 8, rereg: 'false', year: 'MIT Manipal : 2025 - 2026' },
-  { code: 'CSS 2212 : DATABASE SYSTEMS LAB', type: 'Lab', cls: 'Core', credits: 2, sessions: 16, rereg: 'false', year: 'MIT Manipal : 2025 - 2026' },
 ]
 
 const INTERNAL_SEM4 = [
@@ -145,6 +135,7 @@ function OngoingSemesterTab() {
 
 function CoursesEnrolledTab() {
   const [semester, setSemester] = useState('sem4')
+  const rows = COURSES_BY_SEM[semester] || []
   return (
     <div className="ac-tab-content">
       <div className="ac-progress-card">
@@ -171,9 +162,9 @@ function CoursesEnrolledTab() {
                 </tr>
               </thead>
               <tbody>
-                {COURSES_SEM4.map((row, i) => (
+                {rows.map((row, i) => (
                   <tr key={i} className="ac-tr">
-                    <td className="ac-td ac-td-name">{row.code}</td>
+                    <td className="ac-td ac-td-name">{row.name}</td>
                     <td className="ac-td">{row.type}</td>
                     <td className="ac-td">{row.cls}</td>
                     <td className="ac-td">{row.credits}</td>
@@ -307,34 +298,13 @@ function ResultTab() {
         <div className="ac-table-layout">
           <SemSelector value={semester} onChange={setSemester}>
             <div className="ac-stats-list">
-              <div className="ac-stat-row">
-                <span className="ac-stat-label">Total Credits Earned:</span>
-                <span className="ac-stat-value">{resultsData.totalCredits}</span>
-              </div>
-              <div className="ac-stat-row">
-                <span className="ac-stat-label">Credit Earned:</span>
-                <span className="ac-stat-value">{stats.credits}</span>
-              </div>
-              <div className="ac-stat-row">
-                <span className="ac-stat-label">GPA:</span>
-                <span className="ac-stat-value">{stats.gpa}</span>
-              </div>
-              <div className="ac-stat-row">
-                <span className="ac-stat-label">CGPA:</span>
-                <span className="ac-stat-value">{resultsData.cgpa}</span>
-              </div>
-              <div className="ac-stat-row">
-                <span className="ac-stat-label">Avg. Attendance:</span>
-                <span className="ac-stat-value"></span>
-              </div>
-              <div className="ac-stat-row">
-                <span className="ac-stat-label">Semester Rank:</span>
-                <span className="ac-stat-value"></span>
-              </div>
-              <div className="ac-stat-row">
-                <span className="ac-stat-label">Overall Rank:</span>
-                <span className="ac-stat-value"></span>
-              </div>
+              <div className="ac-stat-row"><span className="ac-stat-label">Total Credits Earned:</span>{resultsData.totalCredits}</div>
+              <div className="ac-stat-row"><span className="ac-stat-label">Credit Earned:</span>{stats.credits}</div>
+              <div className="ac-stat-row"><span className="ac-stat-label">GPA:</span>{stats.gpa}</div>
+              <div className="ac-stat-row"><span className="ac-stat-label">CGPA:</span>{resultsData.cgpa}</div>
+              <div className="ac-stat-row"><span className="ac-stat-label">Avg. Attendance:</span></div>
+              <div className="ac-stat-row"><span className="ac-stat-label">Semester Rank:</span></div>
+              <div className="ac-stat-row"><span className="ac-stat-label">Overall Rank:</span></div>
             </div>
           </SemSelector>
           <div className="ac-table-wrap">
@@ -367,7 +337,6 @@ function ResultTab() {
 
 function Academics() {
   const [activeTab, setActiveTab] = useState('ongoing')
-
   return (
     <div className="academics-page">
       <div className="ac-outer-card">

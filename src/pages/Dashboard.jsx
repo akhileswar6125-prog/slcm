@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Dashboard.css'
 import NoticeBoard from '../components/NoticeBoard'
 import StudentClubs from '../components/StudentClubs'
@@ -50,11 +51,16 @@ function Dashboard() {
         <div className="three-col-grid">
           <StudentClubs />
           <StudentCard />
-          <ScheduleCard />
+          <div>
+            <Link to="/schedule" className="nav-lms-link">Navigate to LMS</Link>
+            <ScheduleCard />
+          </div>
         </div>
 
         {/* ATTENDANCE */}
-        <AttendanceCard />
+        <Link to="/attendance" className="att-link-wrap">
+          <AttendanceCard />
+        </Link>
 
       </div>
     </div>

@@ -1,0 +1,36 @@
+.placement-page {
+  flex: 1;
+  padding: 20px 20px 32px;
+  background: #f5f0e8;
+  min-height: calc(100vh - 112px);
+}
+.placement-header {
+  margin-bottom: 16px;
+}
+.placement-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+.placement-sub {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+}
+.placement-card {
+  background: #fff;
+  border: 1px solid #e8e0d4;
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.placement-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+.placement-empty {
+  font-size: 13px;
+  color: #555;
+}

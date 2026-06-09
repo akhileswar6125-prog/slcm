@@ -1,0 +1,235 @@
+.schedule-page {
+  flex: 1;
+  padding: 16px 20px 32px;
+  background: #f5f0e8;
+  min-height: calc(100vh - 112px);
+}
+.schedule-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 16px;
+  align-items: start;
+}
+/* MAIN CALENDAR */
+.schedule-main {
+  background: #fff;
+  border: 1px solid #e8e0d4;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e8e0d4;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cal-header-left { display: flex; align-items: center; gap: 12px; }
+.cal-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #7b5ea7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cal-title { font-size: 14px; font-weight: 600; color: #222; }
+.cal-date-range { font-size: 12px; color: #555; }
+.cal-controls { display: flex; align-items: center; gap: 6px; }
+.cal-arr-btn, .cal-today-btn, .cal-icon-btn, .cal-view-btn, .cal-list-btn {
+  background: #fff;
+  border: 1px solid #d0c8bc;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s;
+  font-family: inherit;
+}
+.cal-arr-btn:hover, .cal-today-btn:hover, .cal-icon-btn:hover, .cal-view-btn:hover { background: #f5f0e8; }
+.cal-list-btn { background: #d4691a; color: #fff; border-color: #d4691a; }
+.cal-list-btn:hover { background: #b85c1a; }
+/* WEEK GRID */
+.week-grid-wrap { overflow: auto; max-height: 600px; -webkit-overflow-scrolling: touch; }
+.week-grid { display: flex; flex-direction: column; min-width: 600px; }
+.week-day-headers {
+  display: grid;
+  grid-template-columns: 64px repeat(7, 1fr);
+  border-bottom: 1px solid #e8e0d4;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+}
+.week-tz {
+  padding: 10px 8px;
+  font-size: 11px;
+  color: #888;
+  border-right: 1px solid #e8e0d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.week-day-header {
+  padding: 8px 4px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  border-right: 1px solid #e8e0d4;
+}
+.week-day-header.today { color: #1a68b5; font-weight: 700; }
+.week-day-header:last-child { border-right: none; }
+.week-body { display: flex; flex-direction: column; }
+.week-hour-row {
+  display: grid;
+  grid-template-columns: 64px repeat(7, 1fr);
+  border-bottom: 1px solid #f0ece6;
+  min-height: 44px;
+}
+.week-hour-label {
+  padding: 4px 8px;
+  font-size: 11px;
+  color: #888;
+  border-right: 1px solid #e8e0d4;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.week-cell {
+  border-right: 1px solid #f0ece6;
+  min-height: 44px;
+  transition: background 0.1s;
+  cursor: pointer;
+}
+.week-cell:last-child { border-right: none; }
+.week-cell:hover { background: #fdf8f4; }
+
+/* SIDEBAR */
+.schedule-sidebar { display: flex; flex-direction: column; gap: 12px; }
+.schedule-for-day-card {
+  background: #fff;
+  border: 1px solid #e8e0d4;
+  border-radius: 8px;
+  padding: 14px;
+}
+.sfd-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.sfd-title { flex: 1; font-size: 14px; font-weight: 600; color: #222; }
+.sfd-ext { display: flex; align-items: center; }
+.sfd-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f0e8;
+  border: 1px solid #e8e0d4;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+/* MINI CALENDAR */
+.mini-cal {
+  background: #fff;
+  border: 1px solid #e8e0d4;
+  border-radius: 8px;
+  padding: 14px;
+}
+.mini-cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 6px;
+}
+.mini-cal-arr {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 13px;
+  padding: 4px 6px;
+  border-radius: 3px;
+}
+.mini-cal-arr:hover { background: #f5f0e8; }
+.mini-cal-title { font-size: 13px; font-weight: 700; color: #222; flex: 1; text-align: center; }
+.mini-cal-year {
+  border: 1px solid #d0c8bc;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 12px;
+  color: #222;
+  cursor: pointer;
+  background: #fff;
+}
+.mini-cal-table { width: 100%; border-collapse: collapse; }
+.mini-cal-table thead th {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  padding: 4px 0;
+}
+.mini-cal-day {
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+  padding: 5px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 18px;
+  transition: background 0.1s;
+}
+.mini-cal-day:hover { background: #f5f0e8; }
+.mini-cal-day.today {
+  background: #e8e0d4;
+  border: 1.5px solid #555;
+  border-radius: 50%;
+  font-weight: 700;
+}
+.mini-cal-day.other-month { color: #bbb; }
+
+/* MY CALENDARS */
+.my-calendars-card, .other-calendars-card {
+  background: #fff;
+  border: 1px solid #e8e0d4;
+  border-radius: 8px;
+  padding: 14px;
+}
+.mc-title { font-size: 14px; font-weight: 600; color: #222; margin-bottom: 10px; }
+.mc-item { display: flex; align-items: center; gap: 8px; }
+.mc-dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+.mc-label { flex: 1; font-size: 13px; color: #333; }
+.oc-header { display: flex; align-items: center; justify-content: space-between; }
+.oc-gear { background: none; border: none; cursor: pointer; padding: 4px; display: flex; align-items: center; color: #555; }
+.oc-gear:hover { color: #222; }
+
+@media (max-width: 900px) {
+  .schedule-layout { grid-template-columns: 1fr; }
+  .schedule-sidebar { order: -1; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+}
+@media (max-width: 600px) {
+  .schedule-page { padding: 12px 10px 24px; }
+  .schedule-sidebar { grid-template-columns: 1fr; }
+  .cal-controls { flex-wrap: wrap; gap: 4px; }
+}
