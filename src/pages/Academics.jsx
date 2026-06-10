@@ -31,14 +31,14 @@ const INTERNAL_SEM4 = [
 ]
 
 const RESULT_SEM4 = [
-  { courseCode: 'MAT 2201', courseName: 'MAT 2201 : PROBABILITY AND OPTIMIZATION', internalMarks: 35, grade: 'E' },
-  { courseCode: 'CSS 2204', courseName: 'CSS 2204 : OPERATING SYSTEMS', internalMarks: 33, grade: 'E' },
-  { courseCode: 'CSS 2201', courseName: 'CSS 2201 : DATABASE SYSTEMS', internalMarks: 35, grade: 'C' },
-  { courseCode: 'CSS 2202', courseName: 'CSS 2202 : DESIGN & ANALYSIS OF ALGORITHMS', internalMarks: 30, grade: 'D' },
-  { courseCode: 'CSS 2203', courseName: 'CSS 2203 : INTRODUCTION TO ARTIFICIAL INTELLIGENCE', internalMarks: 29, grade: 'E' },
-  { courseCode: 'CSS 2213', courseName: 'CSS 2213 : OBJECT - ORIENTED SOFTWARE DEVELOPMENT LAB', internalMarks: 40, grade: 'D' },
-  { courseCode: 'CSS 2211', courseName: 'CSS 2211 : OPERATING SYSTEMS LAB', internalMarks: 43, grade: 'D' },
-  { courseCode: 'CSS 2212', courseName: 'CSS 2212 : DATABASE SYSTEMS LAB', internalMarks: 50, grade: 'C' },
+  { "courseCode": "MAT 2201", "courseName": "Probability and Optimization", "internalMarks": 35, "grade": "C" },
+    { "courseCode": "CSS 2204", "courseName": "Operating Systems", "internalMarks": 33, "grade": "C" },
+    { "courseCode": "CSS 2201", "courseName": "Database Systems", "internalMarks": 42, "grade": "C" },
+    { "courseCode": "CSS 2202", "courseName": "Design and Analysis of Algorithms", "internalMarks": 36, "grade": "B" },
+    { "courseCode": "CSS 2203", "courseName": "Introduction to Artificial Intelligence", "internalMarks": 32, "grade": "D" },
+    { "courseCode": "CSS 2213", "courseName": "Object Oriented Software Development Lab", "internalMarks": 49, "grade": "C" },
+    { "courseCode": "CSS 2211", "courseName": "Operating Systems Lab", "internalMarks": 50, "grade": "B" },
+    
 ]
 
 function SortIcon() {
