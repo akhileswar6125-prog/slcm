@@ -39,7 +39,7 @@
     { "courseCode": "CSS 2204", "courseName": "Operating Systems", "internalMarks": 33, "grade": "C" },
     { "courseCode": "CSS 2201", "courseName": "Database Systems", "internalMarks": 42, "grade": "C" },
     { "courseCode": "CSS 2202", "courseName": "Design and Analysis of Algorithms", "internalMarks": 36, "grade": "B" },
-    { "courseCode": "CSS 2203", "courseName": "Introduction to Artificial Intelligence", "internalMarks": 32, "grade": "C" },
+    { "courseCode": "CSS 2203", "courseName": "Introduction to Artificial Intelligence", "internalMarks": 32, "grade": "D" },
     { "courseCode": "CSS 2213", "courseName": "Object Oriented Software Development Lab", "internalMarks": 49, "grade": "C" },
     { "courseCode": "CSS 2211", "courseName": "Operating Systems Lab", "internalMarks": 50, "grade": "B" },
     { "courseCode": "CSS 2212", "courseName": "Database Systems Lab", "internalMarks": 54, "grade": "A" }
