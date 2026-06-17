@@ -51,10 +51,7 @@ function Dashboard() {
         <div className="three-col-grid">
           <StudentClubs />
           <StudentCard />
-          <div>
-            <Link to="/schedule" className="nav-lms-link">Navigate to LMS</Link>
-            <ScheduleCard />
-          </div>
+          <ScheduleCard />
         </div>
 
         {/* ATTENDANCE */}

@@ -21,25 +21,25 @@ const SEMESTER_OPTIONS = [
 
 const INTERNAL_SEM4 = [
   { courseCode: 'MAT 2201', courseName: 'MAT 2201 : PROBABILITY AND OPTIMIZATION', credits: 3, attendance: 83.33, caMarks: 19, mtaMarks: 16 },
-  { courseCode: 'CSS 2204', courseName: 'CSS 2204 : OPERATING SYSTEMS', credits: 3, attendance: 84.62, caMarks: 19, mtaMarks: 14 },
-  { courseCode: 'CSS 2201', courseName: 'CSS 2201 : DATABASE SYSTEMS', credits: 4, attendance: 96, caMarks: 19, mtaMarks: 16 },
-  { courseCode: 'CSS 2202', courseName: 'CSS 2202 : DESIGN & ANALYSIS OF ALGORITHMS', credits: 4, attendance: 84.62, caMarks: 19, mtaMarks: 11 },
-  { courseCode: 'CSS 2203', courseName: 'CSS 2203 : INTRODUCTION TO ARTIFICIAL INTELLIGENCE', credits: 3, attendance: 82.93, caMarks: 17, mtaMarks: 12 },
-  { courseCode: 'CSS 2213', courseName: 'CSS 2213 : OBJECT - ORIENTED SOFTWARE DEVELOPMENT LAB', credits: 2, attendance: 92.86, caMarks: 40, mtaMarks: 0 },
-  { courseCode: 'CSS 2211', courseName: 'CSS 2211 : OPERATING SYSTEMS LAB', credits: 1, attendance: 100, caMarks: 43, mtaMarks: 0 },
-  { courseCode: 'CSS 2212', courseName: 'CSS 2212 : DATABASE SYSTEMS LAB', credits: 2, attendance: 100, caMarks: 50, mtaMarks: 0 },
+  { courseCode: 'CSS 2204', courseName: 'CSS 2204 : OPERATING SYSTEMS', credits: 3, attendance: 84.62, caMarks: 19, mtaMarks: 17 },
+  { courseCode: 'CSS 2201', courseName: 'CSS 2201 : DATABASE SYSTEMS', credits: 4, attendance: 96, caMarks: 19, mtaMarks: 23 },
+  { courseCode: 'CSS 2202', courseName: 'CSS 2202 : DESIGN & ANALYSIS OF ALGORITHMS', credits: 4, attendance: 84.62, caMarks: 19, mtaMarks: 17 },
+  { courseCode: 'CSS 2203', courseName: 'CSS 2203 : INTRODUCTION TO ARTIFICIAL INTELLIGENCE', credits: 3, attendance: 82.93, caMarks: 17, mtaMarks: 15 },
+  { courseCode: 'CSS 2213', courseName: 'CSS 2213 : OBJECT - ORIENTED SOFTWARE DEVELOPMENT LAB', credits: 2, attendance: 92.86, caMarks: 49, mtaMarks: 0 },
+  { courseCode: 'CSS 2211', courseName: 'CSS 2211 : OPERATING SYSTEMS LAB', credits: 1, attendance: 100, caMarks: 50, mtaMarks: 0 },
+  { courseCode: 'CSS 2212', courseName: 'CSS 2212 : DATABASE SYSTEMS LAB', credits: 2, attendance: 100, caMarks: 54, mtaMarks: 0 },
 ]
 
 const RESULT_SEM4 = [
-  { "courseCode": "MAT 2201", "courseName": "Probability and Optimization", "internalMarks": 35, "grade": "C" },
-    { "courseCode": "CSS 2204", "courseName": "Operating Systems", "internalMarks": 33, "grade": "C" },
+    { "courseCode": "MAT 2201", "courseName": "Probability and Optimization", "internalMarks": 35, "grade": "C" },
+    { "courseCode": "CSS 2204", "courseName": "Operating Systems", "internalMarks": 36, "grade": "C" },
     { "courseCode": "CSS 2201", "courseName": "Database Systems", "internalMarks": 42, "grade": "C" },
     { "courseCode": "CSS 2202", "courseName": "Design and Analysis of Algorithms", "internalMarks": 36, "grade": "B" },
-    { "courseCode": "CSS 2203", "courseName": "Introduction to Artificial Intelligence", "internalMarks": 32, "grade": "D" },
+    { "courseCode": "CSS 2203", "courseName": "Introduction to Artificial Intelligence", "internalMarks": 32, "grade": "C" },
     { "courseCode": "CSS 2213", "courseName": "Object Oriented Software Development Lab", "internalMarks": 49, "grade": "C" },
     { "courseCode": "CSS 2211", "courseName": "Operating Systems Lab", "internalMarks": 50, "grade": "B" },
-    
-]
+    { "courseCode": "CSS 2212", "courseName": "Database Systems Lab", "internalMarks": 54, "grade": "A" }
+  ]
 
 function SortIcon() {
   return (

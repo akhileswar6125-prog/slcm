@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Dashboard from './pages/Dashboard'
+import Profile from './pages/Profile'
 import Academics from './pages/Academics'
 import Schedule from './pages/Schedule'
 import Applications from './pages/Applications'
@@ -20,6 +21,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/applications" element={<Applications />} />

@@ -6,7 +6,7 @@ import studentPhoto from '../assets/student.jpeg'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/', end: true },
-  { label: 'Profile', to: null },
+  { label: 'Profile', to: '/profile' },
   { label: 'Schedule', to: '/schedule' },
   { label: 'Academics', to: '/academics' },
   { label: 'Applications', to: '/applications' },
@@ -129,7 +129,7 @@ function Navbar() {
               <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
             </svg>
           </button>
-          <button className="profile-icon-btn" title="Profile" aria-label="Profile">
+          <button className="profile-icon-btn" title="Profile" aria-label="Profile" onClick={() => navigate("/profile")} style={{cursor:"pointer"}}>
             <img src={studentPhoto} alt="Profile" />
           </button>
           <button className="hamburger" onClick={openMobile} aria-label="Open menu">
