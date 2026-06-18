@@ -448,7 +448,7 @@ function ParentsSection() {
         right={null}
       />
       <div style={{display:'flex',justifyContent:'center',marginTop:20,paddingBottom:8}}>
-        <button className="prof-slcm-btn">Navigate to SLCM 1.0</button>
+        <a href="https://slcm.manipal.edu/" target="_blank" rel="noopener noreferrer" className="prof-slcm-btn">Navigate to SLCM 1.0</a>
       </div>
     </CollapsibleSection>
   )

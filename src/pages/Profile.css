@@ -237,6 +237,7 @@
 
 /* ── SLCM BUTTON ── */
 .prof-slcm-btn {
+  display: inline-block;
   background: #fff;
   border: 1.5px solid #d4691a;
   color: #d4691a;
@@ -247,8 +248,10 @@
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
   font-family: inherit;
+  text-decoration: none;
+  line-height: 1.4;
 }
-.prof-slcm-btn:hover { background: #d4691a; color: #fff; }
+.prof-slcm-btn:hover { background: #d4691a; color: #fff; text-decoration: none; }
 
 /* ── STUDENT CLUBS ── */
 .prof-clubs-card {

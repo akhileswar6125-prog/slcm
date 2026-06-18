@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import manipalLogo from '../assets/manipal_logo.png'
 import studentPhoto from '../assets/student.jpeg'
+import notificationsData from '../data/notifications.json'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/', end: true },
@@ -21,23 +22,82 @@ const MORE_ITEMS = [
   { label: 'Feedback', to: '/feedback' },
 ]
 
+function NotificationPanel({ onClose }) {
+  const unreadCount = notificationsData.filter(n => n.isNew).length
+
+  const handleNotifClick = (pdf) => {
+    window.open(pdf, '_blank', 'noopener,noreferrer')
+  }
+
+  return (
+    <div className="notif-panel">
+      <div className="notif-panel-header">
+        <span className="notif-panel-title">Notifications</span>
+        {unreadCount > 0 && (
+          <span className="notif-panel-badge">{unreadCount} new</span>
+        )}
+      </div>
+      <div className="notif-panel-list">
+        {notificationsData.map((n) => (
+          <button
+            key={n.id}
+            className={`notif-item${n.isNew ? ' notif-item-new' : ''}`}
+            onClick={() => handleNotifClick(n.pdf)}
+            title="Click to open notice PDF"
+          >
+            <div className="notif-item-left">
+              {n.isNew && <span className="notif-dot" />}
+            </div>
+            <div className="notif-item-body">
+              <div className="notif-item-title">{n.title}</div>
+              <div className="notif-item-meta">
+                <span className="notif-item-cat">{n.category}</span>
+                <span className="notif-item-sep">·</span>
+                <span className="notif-item-date">{n.date}</span>
+                <span className="notif-item-sep">·</span>
+                <span className="notif-item-pdf-label">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{marginRight:2,verticalAlign:'middle'}}>
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                  </svg>
+                  View PDF
+                </span>
+              </div>
+            </div>
+            {n.isNew && <span className="notif-item-new-badge">NEW</span>}
+          </button>
+        ))}
+      </div>
+      <div className="notif-panel-footer">
+        <button className="notif-view-all" onClick={onClose}>Close</button>
+      </div>
+    </div>
+  )
+}
+
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [notifOpen, setNotifOpen] = useState(false)
   const dropdownRef = useRef(null)
+  const notifRef = useRef(null)
   const navigate = useNavigate()
+
+  const unreadCount = notificationsData.filter(n => n.isNew).length
 
   useEffect(() => {
     function handleClickOutside(e) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setDropdownOpen(false)
       }
+      if (notifRef.current && !notifRef.current.contains(e.target)) {
+        setNotifOpen(false)
+      }
     }
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  // Close mobile nav on route change
   useEffect(() => {
     setMobileOpen(false)
     document.body.style.overflow = ''
@@ -50,12 +110,6 @@ function Navbar() {
   const closeMobile = () => {
     setMobileOpen(false)
     document.body.style.overflow = ''
-  }
-
-  const handleNavClick = (to) => {
-    closeMobile()
-    setDropdownOpen(false)
-    if (to) navigate(to)
   }
 
   return (
@@ -123,13 +177,32 @@ function Navbar() {
           </div>
         </div>
         <div className="header-icons">
-          <button className="notif-btn" title="Notifications" aria-label="Notifications">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4691a" strokeWidth="2">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-            </svg>
-          </button>
-          <button className="profile-icon-btn" title="Profile" aria-label="Profile" onClick={() => navigate("/profile")} style={{cursor:"pointer"}}>
+          {/* NOTIFICATION BELL */}
+          <div className="notif-wrapper" ref={notifRef}>
+            <button
+              className={`notif-btn${notifOpen ? ' notif-btn-active' : ''}`}
+              title="Notifications"
+              aria-label="Notifications"
+              onClick={() => setNotifOpen(v => !v)}
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4691a" strokeWidth="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+              {unreadCount > 0 && (
+                <span className="notif-count-badge">{unreadCount}</span>
+              )}
+            </button>
+            {notifOpen && <NotificationPanel onClose={() => setNotifOpen(false)} />}
+          </div>
+
+          <button
+            className="profile-icon-btn"
+            title="Profile"
+            aria-label="Profile"
+            onClick={() => navigate('/profile')}
+            style={{cursor:'pointer'}}
+          >
             <img src={studentPhoto} alt="Profile" />
           </button>
           <button className="hamburger" onClick={openMobile} aria-label="Open menu">
